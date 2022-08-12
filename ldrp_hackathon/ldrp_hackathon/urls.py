@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import urls
 from django.urls import path
-from ldrp_hackathon import views 
+from ldrp_hackathon.urls import views
 from django.urls import include
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ldrp_hackathon', include("ldrp_hackathon.urls")),
+    path('ldrp_hackathon/', include("ldrp_hackathon.urls")),
 ]
