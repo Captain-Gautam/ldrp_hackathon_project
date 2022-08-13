@@ -9,19 +9,63 @@
 <body>
     <h1>Title</h1>
     <h3>Gender</h3>>
-    <input type="radio" name="Gender" value="Male">Male
-    <input type="radio" name="Gender" value="Female">Female
-    <input type="radio" name="Gender" value="Others">Others
+    <form action="get" method="post" id="form1">
+        {% csrf_token %}
+        {{form}}
+        <input type="radio" id="male" name="gender_1" value="male">
+        <label for="male">Male</label>
+        <br>
+        <input type="radio" id="female" name="gender_2" value="female">
+        <label for="female">female</label>
+        <br>
+        <input type="radio" id="others" name="gender_3" value="others">
+        <label for="others">Others</label>
+        <br>
+
+
+        <H1>Choose a Symptom</H1>
+        <label for="symptoms" >Symptom 1</label>
+        <select name="symptoms" id="symptom1" required>
+            <option value="null">Choose a Symptom</option>
+            <option value="fever">Fever</option>
+            <option value="cough">Cough</option>
+            <option value="cold">cold</option>
+            <option value="weakness">Weakness</option>
+        </select>
+        <br>
+        <br>
+        <label for="symptoms" >Symptom 2</label>
+        <select name="symptoms" id="symptom2" required>
+            <option value="null">Choose a Symptom</option>
+            <option value="fever">Fever</option>
+            <option value="cough">Cough</option>
+            <option value="cold">cold</option>
+            <option value="weakness">Weakness</option>
+        </select>
+        <br>
+        <br>
+        <label for="symptoms" >Symptom 3</label>
+        <select name="symptoms" id="symptom3">
+            <option value="null">Choose a Symptom</option>
+            <option value="fever">Fever</option>
+            <option value="cough">Cough</option>
+            <option value="cold">cold</option>
+            <option value="weakness">Weakness</option>
+        </select>
+        <br>
+        <br>
+        <label for="symptoms" >Symptom 4</label>
+        <select name="symptoms" id="symptom4">
+            <option value="null">Choose a Symptom</option>
+            <option value="fever">Fever</option>
+            <option value="cough">Cough</option>
+            <option value="cold">cold</option>
+            <option value="weakness">Weakness</option>
+        </select>
     
-    <h3>Category</h3>
-    <select>
-        <option>Please Select</option>
-        <option>Child</option>
-        <option>Teenager</option>
-        <option>Adult</option>
-        <option>Senior citizen</option>
-    </select>
-    <br><br>
-    <input type="submit" value="Submit">
+    </form>
+    <button type="submit" form="form1" value="Submit">Submit</button>
+    
+    
 </body>
 </html>
