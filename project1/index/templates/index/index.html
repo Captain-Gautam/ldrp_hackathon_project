@@ -8,10 +8,11 @@
 </head>
 <body>
     <h1>Title</h1>
-    <h3>Gender</h3>>
-    <form action="get" method="post" id="form1">
+    <h3>Gender</h3>
+    <form action="" method="post" id="form1">
         {% csrf_token %}
         {{form}}
+        <br>
         <input type="radio" id="male" name="gender_1" value="male">
         <label for="male">Male</label>
         <br>
